@@ -9,6 +9,8 @@
 .container{
   margin: 0 2vw;
 }
+.hidden{
+}
 .changerColumnDirection{
   display: flex;
   flex-direction: column;
@@ -35,7 +37,6 @@
   box-sizing: border-box;
 }
 .RowRectangleFirst{
-  margin-bottom: 10px;
 }
 .rectangleContainer{
   display: flex;
@@ -47,12 +48,10 @@
 .grey {
   background-color: #A2A9B7;
   color: white;
-  font-size: 18px;
 }
 .wrapper{
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
 }
 .row{
   display: flex;
@@ -66,18 +65,13 @@
   text-align: center;
   overflow: scroll;
   box-sizing: border-box;
-}
-.box-first{
-  margin-bottom: 10px;
-}
-.rectangle-first{
-  margin-right: 10px;
+  margin-top: 10px;
 }
 .moreno{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 64vw;
+  box-sizing: border-box;
 }
 .boxMini{
   display: flex;
@@ -87,6 +81,7 @@
   font-size: 14px;
   line-height: 20px;
   box-sizing: border-box;
+  margin-top: 10px;
 }
 .rectangle{
   display: flex;
@@ -97,11 +92,14 @@
   line-height: 20px;
   box-sizing: border-box;
   overflow: hidden;
+  margin-top: 10px;
   &Big{
     display: flex;
     align-items: flex-end;
     width: 64vw;
+    height: 16vw;
     box-sizing: border-box;
+    margin-top: 10px;
   }
 }
 .lightGrey{
@@ -142,21 +140,16 @@
   .box{
     width: 66vw;
     height: 66vw;
-    &Mini{
-      width: 32vw;
-      height: 32vw;
-    }
   }
   .row{
-    width: 66vw;
-  }
-  .moreno{
-    height: 66vw;
+    width: 100%;
+    justify-content: space-between;
   }
   .rectangle{
-    width: 32vw;
+    width: 48vw;
+    height: 48vw;
     &Big{
-      width: 66vw;
+      width: 100%;
     }
   }
   .changerColumnDirection{
