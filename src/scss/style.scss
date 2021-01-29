@@ -7,7 +7,39 @@
   padding: 0;
 }
 .container{
-  margin: 0 4vw;
+  margin: 0 2vw;
+}
+.changerColumnDirection{
+  display: flex;
+  flex-direction: column;
+}
+.changerRowToColumn{
+  display: flex;
+  flex-direction: row;
+}
+.changerRowToColumnReverse{
+  display: flex;
+  flex-direction: row;
+}
+.changerColumnToRow{
+  display: flex;
+  flex-direction: column;
+}
+.rectangleMiniRow{
+  display: flex;
+  justify-content: space-between;
+}
+.rectangleMiniColumn{
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.RowRectangleFirst{
+  margin-bottom: 10px;
+}
+.rectangleContainer{
+  display: flex;
+  flex-direction: column;
 }
 .roboto{
   font-family: Roboto;
@@ -16,27 +48,36 @@
   background-color: #A2A9B7;
   color: white;
   font-size: 18px;
-  padding: 30px 30px;
 }
 .wrapper{
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
 }
+.row{
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 64vw;
+}
 .box{
-  width: 60vw;
-  height: 60vw;
+  width: 64vw;
+  height: 64vw;
   text-align: center;
+  overflow: scroll;
   box-sizing: border-box;
 }
 .box-first{
   margin-bottom: 10px;
 }
+.rectangle-first{
+  margin-right: 10px;
+}
 .moreno{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 60vw;
+  height: 64vw;
 }
 .boxMini{
   display: flex;
@@ -44,24 +85,25 @@
   width: 30vw;
   height: 30vw;
   font-size: 14px;
+  line-height: 20px;
   box-sizing: border-box;
 }
 .rectangle{
   display: flex;
   align-items: flex-end;
-  width: 25vw;
+  width: 30vw;
   height: 16vw;
   font-size: 14px;
+  line-height: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
   &Big{
     display: flex;
     align-items: flex-end;
-    width: 60vw;
+    width: 64vw;
+    box-sizing: border-box;
   }
 }
-.text{
-  vertical-align: bottom;
-}
-
 .lightGrey{
   background: #E8EBED;
 }
@@ -91,7 +133,42 @@
 }
 
 @media (max-width: 320px) {
-  .green {
+  .hidden {
     display: none;
+  }
+  .container{
+    margin: 0;
+  }
+  .box{
+    width: 66vw;
+    height: 66vw;
+    &Mini{
+      width: 32vw;
+      height: 32vw;
+    }
+  }
+  .row{
+    width: 66vw;
+  }
+  .moreno{
+    height: 66vw;
+  }
+  .rectangle{
+    width: 32vw;
+    &Big{
+      width: 66vw;
+    }
+  }
+  .changerColumnDirection{
+    flex-direction: column-reverse;
+  }
+  .changerRowToColumn{
+    flex-direction: column;
+  }
+  .changerColumnToRow{
+    flex-direction: row;
+  }
+  .changerRowToColumnReverse{
+    flex-direction: column-reverse;
   }
 }

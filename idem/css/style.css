@@ -11,6 +11,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 10px;
 }
 
 .footer-heading {
@@ -46,7 +47,81 @@
 }
 
 .container {
-  margin: 0 4vw;
+  margin: 0 2vw;
+}
+
+.changerColumnDirection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.changerRowToColumn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.changerRowToColumnReverse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.changerColumnToRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.rectangleMiniRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.rectangleMiniColumn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.RowRectangleFirst {
+  margin-bottom: 10px;
+}
+
+.rectangleContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .roboto {
@@ -57,7 +132,6 @@
   background-color: #A2A9B7;
   color: white;
   font-size: 18px;
-  padding: 30px 30px;
 }
 
 .wrapper {
@@ -70,16 +144,33 @@
   margin-top: 10px;
 }
 
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 64vw;
+}
+
 .box {
-  width: 60vw;
-  height: 60vw;
+  width: 64vw;
+  height: 64vw;
   text-align: center;
+  overflow: scroll;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 .box-first {
   margin-bottom: 10px;
+}
+
+.rectangle-first {
+  margin-right: 10px;
 }
 
 .moreno {
@@ -93,7 +184,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 60vw;
+  height: 64vw;
 }
 
 .boxMini {
@@ -106,6 +197,7 @@
   width: 30vw;
   height: 30vw;
   font-size: 14px;
+  line-height: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -117,9 +209,13 @@
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  width: 25vw;
+  width: 30vw;
   height: 16vw;
   font-size: 14px;
+  line-height: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
 }
 
 .rectangleBig {
@@ -129,11 +225,9 @@
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  width: 60vw;
-}
-
-.text {
-  vertical-align: bottom;
+  width: 64vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .lightGrey {
@@ -171,7 +265,65 @@
 }
 
 @media (max-width: 320px) {
-  .green {
+  .hidden {
     display: none;
+  }
+
+  .container {
+    margin: 0;
+  }
+
+  .box {
+    width: 66vw;
+    height: 66vw;
+  }
+
+  .boxMini {
+    width: 32vw;
+    height: 32vw;
+  }
+
+  .row {
+    width: 66vw;
+  }
+
+  .moreno {
+    height: 66vw;
+  }
+
+  .rectangle {
+    width: 32vw;
+  }
+
+  .rectangleBig {
+    width: 66vw;
+  }
+
+  .changerColumnDirection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .changerRowToColumn {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .changerColumnToRow {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .changerRowToColumnReverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 }
